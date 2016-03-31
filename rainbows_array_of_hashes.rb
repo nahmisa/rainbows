@@ -1,4 +1,6 @@
 
+require "colorize"
+
 color_lookup = [
    {red: {hex: "#FF0000", r: 255, g: 0, b: 0}},
    {orange: {hex: "#FF7F00", r: 255, g: 125, b: 0}},
@@ -10,5 +12,8 @@ color_lookup = [
 ]
 
 color_lookup.each do |hash|
-  puts hash.keys
+  color = hash.keys[0] #we just want the symbol
+  puts "#{color}".colorize(color)
 end
+
+#booo, they didn't have all the colors.
